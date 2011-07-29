@@ -50,11 +50,14 @@
     <Folder Include="app\models" />
     <Folder Include="app\views" />
     <Folder Include="app\views\layouts" />
+    <Folder Include="app\views\microposts" />
+    <Folder Include="app\views\users" />
     <Folder Include="config" />
     <Folder Include="config\environments" />
     <Folder Include="config\initializers" />
     <Folder Include="config\locales" />
     <Folder Include="db" />
+    <Folder Include="db\migrate" />
     <Folder Include="doc" />
     <Folder Include="lib" />
     <Folder Include="lib\tasks" />
@@ -70,6 +73,7 @@
     <Folder Include="test\integration" />
     <Folder Include="test\performance" />
     <Folder Include="test\unit" />
+    <Folder Include="test\unit\helpers" />
     <Folder Include="tmp" />
     <Folder Include="tmp\cache" />
     <Folder Include="tmp\pids" />
@@ -80,7 +84,13 @@
   </ItemGroup>
   <ItemGroup>
     <Ruby Include="app\controllers\application_controller.rb" />
+    <Ruby Include="app\controllers\microposts_controller.rb" />
+    <Ruby Include="app\controllers\users_controller.rb" />
     <Ruby Include="app\helpers\application_helper.rb" />
+    <Ruby Include="app\helpers\microposts_helper.rb" />
+    <Ruby Include="app\helpers\users_helper.rb" />
+    <Ruby Include="app\models\micropost.rb" />
+    <Ruby Include="app\models\user.rb" />
     <Ruby Include="config\application.rb" />
     <Ruby Include="config\boot.rb" />
     <Ruby Include="config\environment.rb" />
@@ -93,19 +103,40 @@
     <Ruby Include="config\initializers\secret_token.rb" />
     <Ruby Include="config\initializers\session_store.rb" />
     <Ruby Include="config\routes.rb" />
+    <Ruby Include="db\migrate\20110729180005_create_users.rb" />
+    <Ruby Include="db\migrate\20110729194231_create_microposts.rb" />
+    <Ruby Include="db\schema.rb" />
     <Ruby Include="db\seeds.rb" />
+    <Ruby Include="test\functional\microposts_controller_test.rb" />
+    <Ruby Include="test\functional\users_controller_test.rb" />
     <Ruby Include="test\performance\browsing_test.rb" />
     <Ruby Include="test\test_helper.rb" />
+    <Ruby Include="test\unit\helpers\microposts_helper_test.rb" />
+    <Ruby Include="test\unit\helpers\users_helper_test.rb" />
+    <Ruby Include="test\unit\micropost_test.rb" />
+    <Ruby Include="test\unit\user_test.rb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedRuby Include="app\views\layouts\application.html.erb" />
+    <EmbeddedRuby Include="app\views\microposts\edit.html.erb" />
+    <EmbeddedRuby Include="app\views\microposts\index.html.erb" />
+    <EmbeddedRuby Include="app\views\microposts\new.html.erb" />
+    <EmbeddedRuby Include="app\views\microposts\show.html.erb" />
+    <EmbeddedRuby Include="app\views\microposts\_form.html.erb" />
+    <EmbeddedRuby Include="app\views\users\edit.html.erb" />
+    <EmbeddedRuby Include="app\views\users\index.html.erb" />
+    <EmbeddedRuby Include="app\views\users\new.html.erb" />
+    <EmbeddedRuby Include="app\views\users\show.html.erb" />
+    <EmbeddedRuby Include="app\views\users\_form.html.erb" />
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
     <Content Include="config.ru" />
     <Content Include="config\database.yml" />
     <Content Include="config\locales\en.yml" />
+    <Content Include="db\development.sqlite3" />
     <Content Include="Gemfile" />
+    <Content Include="Gemfile.lock" />
     <Content Include="lib\tasks\.gitkeep" />
     <Content Include="log\development.log" />
     <Content Include="log\production.log" />
@@ -125,7 +156,10 @@
     <Content Include="public\javascripts\rails.js" />
     <Content Include="public\robots.txt" />
     <Content Include="public\stylesheets\.gitkeep" />
-    <Content Include="Rakefile" />
+    <Content Include="public\stylesheets\scaffold.css" />
+    <Content Include="test\fixtures\microposts.yml" />
+    <Content Include="test\fixtures\users.yml" />
+    <Content Include="tmp\pids\server.pid" />
     <Content Include="vendor\plugins\.gitkeep" />
   </ItemGroup>
   <Target Name="Rebuild" DependsOnTargets="$(RebuildDependsOn)" Inputs="@(Ruby)" Outputs="$(MSBuildProjectDirectory)\SyntaxCheck\%(Identity)">
