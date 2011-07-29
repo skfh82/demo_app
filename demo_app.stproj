@@ -42,6 +42,92 @@
     <Name>demo_app</Name>
     <RootNamespace>demo_app</RootNamespace>
   </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="app" />
+    <Folder Include="app\controllers" />
+    <Folder Include="app\helpers" />
+    <Folder Include="app\mailers" />
+    <Folder Include="app\models" />
+    <Folder Include="app\views" />
+    <Folder Include="app\views\layouts" />
+    <Folder Include="config" />
+    <Folder Include="config\environments" />
+    <Folder Include="config\initializers" />
+    <Folder Include="config\locales" />
+    <Folder Include="db" />
+    <Folder Include="doc" />
+    <Folder Include="lib" />
+    <Folder Include="lib\tasks" />
+    <Folder Include="log" />
+    <Folder Include="public" />
+    <Folder Include="public\images" />
+    <Folder Include="public\javascripts" />
+    <Folder Include="public\stylesheets" />
+    <Folder Include="script" />
+    <Folder Include="test" />
+    <Folder Include="test\fixtures" />
+    <Folder Include="test\functional" />
+    <Folder Include="test\integration" />
+    <Folder Include="test\performance" />
+    <Folder Include="test\unit" />
+    <Folder Include="tmp" />
+    <Folder Include="tmp\cache" />
+    <Folder Include="tmp\pids" />
+    <Folder Include="tmp\sessions" />
+    <Folder Include="tmp\sockets" />
+    <Folder Include="vendor" />
+    <Folder Include="vendor\plugins" />
+  </ItemGroup>
+  <ItemGroup>
+    <Ruby Include="app\controllers\application_controller.rb" />
+    <Ruby Include="app\helpers\application_helper.rb" />
+    <Ruby Include="config\application.rb" />
+    <Ruby Include="config\boot.rb" />
+    <Ruby Include="config\environment.rb" />
+    <Ruby Include="config\environments\development.rb" />
+    <Ruby Include="config\environments\production.rb" />
+    <Ruby Include="config\environments\test.rb" />
+    <Ruby Include="config\initializers\backtrace_silencers.rb" />
+    <Ruby Include="config\initializers\inflections.rb" />
+    <Ruby Include="config\initializers\mime_types.rb" />
+    <Ruby Include="config\initializers\secret_token.rb" />
+    <Ruby Include="config\initializers\session_store.rb" />
+    <Ruby Include="config\routes.rb" />
+    <Ruby Include="db\seeds.rb" />
+    <Ruby Include="test\performance\browsing_test.rb" />
+    <Ruby Include="test\test_helper.rb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedRuby Include="app\views\layouts\application.html.erb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitignore" />
+    <Content Include="config.ru" />
+    <Content Include="config\database.yml" />
+    <Content Include="config\locales\en.yml" />
+    <Content Include="Gemfile" />
+    <Content Include="lib\tasks\.gitkeep" />
+    <Content Include="log\development.log" />
+    <Content Include="log\production.log" />
+    <Content Include="log\server.log" />
+    <Content Include="log\test.log" />
+    <Content Include="public\404.html" />
+    <Content Include="public\422.html" />
+    <Content Include="public\500.html" />
+    <Content Include="public\favicon.ico" />
+    <Content Include="public\images\rails.png" />
+    <Content Include="public\index.html" />
+    <Content Include="public\javascripts\application.js" />
+    <Content Include="public\javascripts\controls.js" />
+    <Content Include="public\javascripts\dragdrop.js" />
+    <Content Include="public\javascripts\effects.js" />
+    <Content Include="public\javascripts\prototype.js" />
+    <Content Include="public\javascripts\rails.js" />
+    <Content Include="public\robots.txt" />
+    <Content Include="public\stylesheets\.gitkeep" />
+    <Content Include="Rakefile" />
+    <Content Include="vendor\plugins\.gitkeep" />
+  </ItemGroup>
   <Target Name="Rebuild" DependsOnTargets="$(RebuildDependsOn)" Inputs="@(Ruby)" Outputs="$(MSBuildProjectDirectory)\SyntaxCheck\%(Identity)">
   </Target>
   <Target Name="BeforeBuild" Condition="'$(PreBuildEvent)'!='' ">
